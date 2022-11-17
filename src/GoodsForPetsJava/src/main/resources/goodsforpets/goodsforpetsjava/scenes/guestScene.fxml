@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="goodsforpets.goodsforpetsjava.controllers.GuestSceneController">
+   <children>
+      <GridPane alignment="BASELINE_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="129.0" minHeight="0.0" prefHeight="74.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="517.0" minHeight="10.0" prefHeight="384.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="1">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="Поиск:">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Comic Sans MS" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField maxWidth="450.0" minWidth="-Infinity" prefWidth="300.0" promptText="Введите ваш поисковый запрос">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Comic Sans MS" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_RIGHT" fillWidth="false" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ComboBox prefWidth="300.0" promptText="Производитель">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ComboBox>
+                        <HBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" spacing="10.0">
+                           <children>
+                              <RadioButton mnemonicParsing="false" selected="true" text="По возрастанию">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="12.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="pricingToggleGroup" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="По убыванию" toggleGroup="$pricingToggleGroup">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                              <Button defaultButton="true" mnemonicParsing="false" onAction="#onExitButtonClick" text="Выход">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="500.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="92.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
+                     <image>
+                        <Image url="@../img/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="216.0" text="ООО &quot;Товары для животных&quot;" HBox.hgrow="SOMETIMES">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="140.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" text="Гость">
+                           <font>
+                              <Font name="Comic Sans MS" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
