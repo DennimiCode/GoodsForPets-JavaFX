@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+    <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="connection.url">PASTE_YOUR_CONNECTION_STRING_HERE</property>
+    <property name="connection.username">PASTE_USERNAME_HERE</property>
+    <property name="connection.password">PASTE_PASSWORD_HERE</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="show_sql">true</property>
+
+    <mapping class="com.goodsforpets.desktop.models.Address"/>
+    <mapping class="com.goodsforpets.desktop.models.BaseMaterial"/>
+    <mapping class="com.goodsforpets.desktop.models.Category"/>
+    <mapping class="com.goodsforpets.desktop.models.GrocerySet"/>
+    <mapping class="com.goodsforpets.desktop.models.Location"/>
+    <mapping class="com.goodsforpets.desktop.models.Manufacturer"/>
+    <mapping class="com.goodsforpets.desktop.models.Mixture"/>
+    <mapping class="com.goodsforpets.desktop.models.OrderProducts"/>
+    <mapping class="com.goodsforpets.desktop.models.Order"/>
+    <mapping class="com.goodsforpets.desktop.models.Product"/>
+    <mapping class="com.goodsforpets.desktop.models.ProductInfo"/>
+    <mapping class="com.goodsforpets.desktop.models.RawMaterial"/>
+    <mapping class="com.goodsforpets.desktop.models.Role"/>
+    <mapping class="com.goodsforpets.desktop.models.SubProduct"/>
+    <mapping class="com.goodsforpets.desktop.models.Supplier"/>
+    <mapping class="com.goodsforpets.desktop.models.User"/>
+    <mapping class="com.goodsforpets.desktop.models.Sysdiagrams"/>
+  </session-factory>
+</hibernate-configuration>
